@@ -23,11 +23,8 @@ Assume your project structure is as follows:
 To clone the repository, use the following command:
 
 ```sh
-git clone <repository-url>
-cd tests
+git clone https://github.com/dita-daystaruni/k6-testing.git
 ```
-
-Replace `<repository-url>` with the actual URL of your repository.
 
 ## Running Tests Locally
 
