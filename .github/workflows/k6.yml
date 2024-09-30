@@ -1,0 +1,25 @@
+name: Run K6 Tests Locally
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  k6-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install K6
+        run: |
+          curl -sL https://raw.githubusercontent.com/grafana/k6/master/scripts/install.sh | bash
+
+      - name: Run K6 Tests
+        run: |
+          k6 run /verisafe/login.js
